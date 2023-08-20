@@ -1,0 +1,1071 @@
+{
+	"info": {
+		"_postman_id": "a43b0513-1fa4-4a96-a410-a3efad0ddce0",
+		"name": "Integral",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Attendance",
+			"item": [
+				{
+					"name": "StartShift",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "86759c8e-cac8-4cf6-b158-b3ce8682fdca",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"driverReference\": \"D2222\",\n  \"vehicleRegistration\": \"WCG234GPX\",\n  \"eventTime\": \"2023-04-25 04:37:41\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/tms/epod/driver/attendance/shift-start",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tms",
+								"epod",
+								"driver",
+								"attendance",
+								"shift-start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "start-break",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3074f3e2-eba5-489c-92a3-fa63df33ba8f",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"driverReference\": \"D2222\",\n  \"vehicleRegistration\": \"WCG234GPX\",\n  \"eventTime\": \"2023-04-21 04:37:41\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/tms/epod/driver/attendance/start-break",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tms",
+								"epod",
+								"driver",
+								"attendance",
+								"start-break"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "end-break",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "f9c1f404-181e-4ea4-9bbf-eab1446c59d8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"driverReference\": \"D2222\",\n  \"vehicleRegistration\": \"WCG234GPX\",\n  \"eventTime\": \"2023-04-18 09:01:50\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/tms/epod/driver/attendance/end-break",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tms",
+								"epod",
+								"driver",
+								"attendance",
+								"end-break"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "end-shift",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{epod-driver-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"driverReference\": \"D2222\",\n    \"vehicleRegistration\": \"WCG234GPX\",\n    \"eventTime\": \"2023-04-10 20:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/tms/epod/driver/attendance/shift-end",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tms",
+								"epod",
+								"driver",
+								"attendance",
+								"shift-end"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yesterdaylog",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{epod-driver-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/tms/epod/driver/attendance/yesterday-log",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tms",
+								"epod",
+								"driver",
+								"attendance",
+								"yesterday-log"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "86759c8e-cac8-4cf6-b158-b3ce8682fdca",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"driverReference\": \"D2222\",\n    \"vehicleRegistration\": \"WCG234GPX\",\n    \"eventTime\": \"2023-04-18 05:19:58\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/tms/epod/vehicle/change",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tms",
+								"epod",
+								"vehicle",
+								"change"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TodayLog",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4981a6b5-b254-42e6-8bc0-b92ee5d15386",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/tms/epod/driver/attendance/today-log",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tms",
+								"epod",
+								"driver",
+								"attendance",
+								"today-log"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Epod_Route_plan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"company\":{\n      \"reference\":\"PPCSA\",\n      \"name\":\"PPC Cement SA (Pty) Ltd\",\n      \"routes\":[\n         {\n            \"reference\":\"ViR100001-05_161\",\n            \"name\":\"ViR100001-05_161\",\n            \"startAt\":\"2023-07-27T10:00:00+02:00\",\n            \"endAt\":\"2023-07-27T16:43:00+02:00\",\n            \"distance\":2.7,\n            \"minutes\":9,\n            \"depot\":{\n               \"reference\":\"HE\"\n            },\n            \"territory\":{\n               \"reference\":\"Primary\"\n            },\n            \"transporter\":{\n               \"reference\":\"FORSATSAZAR15\"\n            },\n            \"vehicle\":{\n               \"FleetNo\":\"DP53TBGP\",\n               \"registrationNumber\":\"DP53TBGP\"\n            },\n            \"vehicleType\":{\n               \"reference\":\"ILKFL_34_AH\"\n            },\n            \"trailers\":[\n               {\n                  \"number\":1,\n                  \"registrationNumber\":\"SZB343GP\"\n               },\n               {\n                  \"number\":2,\n                  \"registrationNumber\":\"FGH234GP\"\n               }\n            ],\n            \"trips\":[\n               {\n                  \"reference\":\"ViR100001-05_161\",\n                  \"name\":\"ViR100001-05_161\",\n                  \"tripType\":\"Outbound\",\n                  \"orderType\":\"Bags\",\n                  \"terms\":\"Ad Hoc\",\n                  \"agent\":\"Inhance\",\n                  \"sequence\":1,\n                  \"startAt\":\"2023-07-27T10:00:00+02:00\",\n                  \"endAt\":\"2023-07-27T16:43:00+02:00\",\n                  \"distance\":50,\n                  \"minutes\":60,\n                  \"seals\":[\n                     {\n                        \"number\":1,\n                        \"reference\":\"2962\"\n                     },\n                     {\n                        \"number\":2,\n                        \"reference\":\"2963\"\n                     },\n                     {\n                        \"number\":3,\n                        \"reference\":\"2964\"\n                     }\n                  ],\n                  \"stops\":[\n                     {\n                        \"reference\": \"Stop 1-F159\",\n                        \"sequence\":1,\n                        \"stopType\":\"Pick\",\n                        \"diversionBlock\":false,\n                        \"qrCode\":\"ViR100001-05_161\",\n                        \"arrivalAt\":\"2023-07-27T10:00:00+02:00\",\n                        \"departureAt\":\"2023-07-27T14:00:00+02:00\",\n                        \"distanceFromPrevious\":0,\n                        \"minutesFromPrevious\":0,\n                        \"instruction\":\"Please ensure that you are wearing PPE\",\n                        \"locationReference\":\"HE\",\n                        \"axleWeight\":30000,\n                        \"grossWeight\":30000,\n                        \"tareWeight\":30000,\n                        \"nettWeight\":30000,\n                        \"timeIn\":\"2023-07-27T16:00:00+02:00\",\n                        \"timeOut\":\"2023-07-27T16:00:00+02:00\",\n                        \"driver\": {\n                                    \"reference\": \"D5555\"\n                        },\n                        \"orders\":[\n                           {\n                              \"orderNumber\":\"202187541_ViR100001-05_161\"\n                           }\n                        ]\n                     },\n                     {\n                        \"reference\": \"Stop 2-F159\",\n                        \"sequence\":2,\n                        \"stopType\":\"Drop\",\n                        \"diversionBlock\":false,\n                        \"qrCode\":null,\n                        \"arrivalAt\":\"2023-07-27T14:00:00+02:00\",\n                        \"departureAt\":\"2023-07-27T16:43:00+02:00\",\n                        \"distanceFromPrevious\":9.1,\n                        \"minutesFromPrevious\":13,\n                        \"instruction\":\"Offloading Zone A3\",\n                        \"locationReference\":\"20002346\",\n                        \"axleWeight\":30000,\n                        \"grossWeight\":30000,\n                        \"tareWeight\":30000,\n                        \"nettWeight\":30000,\n                        \"timeIn\":null,\n                        \"timeOut\":null,\n                        \"driver\": {\n                                    \"reference\": \"D5555\"\n                        },\n                        \"orders\":[\n                           {\n                              \"orderNumber\":\"202187541_ViR100001-05_161\"\n                           }\n                        ]\n                     }\n                  ]\n               }\n            ],\n            \"orders\":[\n               {\n                  \"orderNumber\":\"202187541_ViR100001-05_161\",\n                  \"createdAt\":\"2023-07-27T06:43:00+02:00\",\n                  \"salesOffice\":\"GP\",\n                  \"salesRepresentative\":\"Petunia Motuba\",\n                  \"salesRepresentativeEmail\":\"petunia@ppc.co.za\",\n                  \"customerReferenceNumber\":\"PO23244\",\n                  \"customerRepresentativeName\":\"Troy\",\n                  \"customerRepresentativeEmail\":\"troy@inhancesc.com\",\n                  \"customerRepresentativePhone\":\"+278363784993\",\n                  \"sourceLocationReference\":\"HE\",\n                  \"destinationLocationReference\":\"20002346\",\n                  \"billingReference\":\"20044303\",\n                  \"divisionReference\":\"CEM001\",\n                  \"serviceDate\":\"2023-07-27\",\n                  \"serviceStart\":\"06:00\",\n                  \"serviceEnd\":\"10:00\",\n                  \"servicePriority\":\"Urgent\",\n                  \"plannedWeight\":34208,\n                  \"plannedWeightUom\":\"KG\",\n                  \"plannedVolume\":null,\n                  \"plannedVolumeUom\":\"\",\n                  \"actualWeight\":\"34208\",\n                  \"actualWeightUom\":\"KG\",\n                  \"actualVolume\":\"\",\n                  \"actualVolumeUom\":\"\",\n                  \"comment\":\"labour required\",\n                  \"planningStatus\":\"Ready\",\n                  \"items\":[\n                     {\n                        \"itemNumber\":\"10\",\n                        \"reference\":\"2734411\",\n                        \"packingUnitFlag\":false,\n                        \"plannedItemQuantity\":680,\n                        \"plannedItemUom\":\"bags\"\n                     },\n                     {\n                        \"itemNumber\":\"20\",\n                        \"reference\":\"PAL\",\n                        \"packingUnitFlag\":true,\n                        \"plannedItemQuantity\":16,\n                        \"plannedItemUom\":\"EA\"\n                     }\n                  ],\n                  \"subOrders\":[\n                     {\n                        \"subOrderNumber\":\"804100001-05_ViR100001-05_161\",\n                        \"createdAt\":\"2021-07-22T08:43:00+02:00\",\n                        \"finalisedBy\":\"Eunice Khakhu\",\n                        \"returnReceiptNumber\":\"7281921\",\n                        \"subOrderItems\":[\n                           {\n                              \"orderItemNumber\":\"10\",\n                              \"receiptNumber\":\"R3892112\",\n                              \"chequeNumber\":\"CH00001\",\n                              \"chequeAmount\":100.00,\n                              \"cashAmount\":0,\n                              \"amountExclVat\":100.00,\n                              \"vat\":15.00,\n                              \"amountInclVat\":115.00,\n                              \"currency\":\"ZAR\",\n                              \"actualItemQuantity\":680,\n                              \"actualItemUom\":\"Bags\"\n                           },\n                           {\n                              \"orderItemNumber\":\"20\",\n                              \"receiptNumber\":\"R3892112\",\n                              \"chequeNumber\":\"CH00001\",\n                              \"chequeAmount\":100.00,\n                              \"cashAmount\":0,\n                              \"amountExclVat\":100.00,\n                              \"vat\":15.00,\n                              \"amountInclVat\":115.00,\n                              \"currency\":\"ZAR\",\n                              \"actualItemQuantity\":16,\n                              \"actualItemUom\":\"EA\"\n                           }\n                        ]\n                     }\n                  ]\n               }\n            ],\n            \"masterdata\":{\n               \"company\":[\n                  {\n                     \"reference\":\"PPCSA\",\n                     \"name\":\"PPC Cement South Africa (Pty) Ltd\",\n                     \"vatReference\":\"4290271891\",\n                     \"registrationReference\":\"2009/005305/07\"\n                  }\n               ],\n               \"divisions\":[\n                  {\n                     \"reference\":\"CEM001\",\n                     \"name\":\"Cement Division Head Office\",\n\"address\":\"Eastgate 20 (PPC Building), 148 Katherine Street, Corner Grayston Drive, Sandton, 2000, South Africa\",\n                     \"postalAddress\":\"PO Box 787416, Sandton, 2146, South Africa\",\n                     \"email\":\"info@ppc.co.za\",\n                     \"fax\":\"+2711 486 2263\",\n                     \"telephone\":\"+2711 486 2272\",\n                     \"mobile\":\"+2711 486 2272\"\n                  }\n               ],\n               \"vehicles\":[\n                  {\n                     \"registrationNumber\":\"DP53TBGP\",\n                     \"fleetNumber\":\"DP53TBGP\",\n                     \"vehicleTypeReference\":\"ILKFL_34_AH\"\n                  }\n               ],\n               \"vehicleTypes\":[\n                  {\n                     \"reference\":\"ILKFL_34_AH\",\n                     \"name\":\"INTERLINK FLATBED_34_AH\",\n                     \"maxWeight\":34000,\n                     \"maxWeightUom\":\"KG\",\n                     \"maxVolume\":null,\n                     \"maxVolumeUOM\":\"\"\n                  }\n               ],\n               \"transporters\":[\n                  {\n                     \"reference\":\"FORSATSAZAR15\",\n                     \"name\":\"FORUM SA TRADING 248 PTY ltd T/A Cargo Brick\",\n                     \"accountNumber\":\"1243432\"\n                  }\n               ],\n               \"locations\":[\n                  {\n                     \"reference\":\"HE\",\n                     \"name\":\"PPC Hercules\",\n                     \"locationTypeReference\":\"RSA\",\n                     \"buildingNumber\":\"\",\n                     \"buildingName\":\"\",\n                     \"address1\":\"62 Lower germiston Road\",\n                     \"address2\":\"Johannesburg\",\n                     \"address3\":\"\",\n                     \"suburb\":\"Germiston\",\n                     \"postalCode\":\"2022\",\n                     \"postalAddress\":\"PO Box 787416, Sandton, 2146, South Africa\",\n                     \"city\":\"JHB\",\n                     \"province\":\"Gauteng\",\n                     \"country\":\"South Africa\",\n                     \"latitude\":\"-26.220459000623446\",\n                     \"longitude\":\"28.118901638614144\",\n                     \"contact\":\"+2783728199\",\n                     \"email\":\"sales@ppcjupiter.com\",\n                     \"reportRecipients\":[\n                        {\n                           \"pod\":[\n                              {\n                                 \"name\":\"Flora\",\n                                 \"surname\":\"Phiri\",\n                                 \"mobile\": \"+2781255821\",\n                                 \"email\":\"flora.phiri@inhancesc.com\"\n                              }\n                           ]\n                        }\n                     ]\n                  },\n                  {\n                     \"reference\":\"20002346\",\n                     \"name\":\"ABC Customer\",\n                     \"locationTypeReference\":\"RSA\",\n                     \"buildingNumber\":\"Unit 16\",\n                     \"buildingName\":\"\",\n                     \"address1\":\"c/o Noon Road and Sunrise Boulevard Lonehill\",\n                     \"address2\":\"Fourways\",\n                     \"address3\":\"\",\n                     \"suburb\":\"Johannesburg\",\n                     \"postalCode\":\"2191\",\n                     \"city\":\"JHB\",\n                     \"province\":\"Gauteng\",\n                     \"country\":\"South Africa\",\n                     \"latitude\":\"-26.01324678444778\",\n                     \"longitude\":\"28.013361095814204\",\n                     \"contact\":\"+2783728199\",\n                     \"email\":\"flora.phiri@inhancesc.com\",\n                     \"reportRecipients\":[\n                        {\n                           \"pod\":[\n                              {\n                                 \"name\":\"Flora\",\n                                 \"surname\":\"Phiri\",\n                                 \"mobile\":\"+2781255821\",\n                                 \"email\":\"flora.phiri@inhancesc.com\"\n                              }\n                           ]\n                        }\n                     ]\n                  }\n               ],\n               \"billingLocations\":[\n                  {\n                     \"reference\":\"20044303\",\n                     \"name\":\"Builders Head Office\",\n                     \"buildingNumber\":\"13A\",\n                     \"buildingName\":\"Block 16\",\n                     \"address1\":\"51 Hippo Street\",\n                     \"address2\":\"Randburg\",\n                     \"address3\":\"\",\n                     \"suburb\":\"Randburg\",\n                     \"postalCode\":\"2000\",\n                     \"city\":\"JHB\",\n                     \"province\":\"Gauteng\",\n                     \"country\":\"South Africa\",\n                     \"contact\":\"+2783728199\",\n                     \"email\":\"person@domain.com\"\n                  }\n               ],\n               \"products\":[\n                  {\n                     \"reference\":\"2734411\",\n                     \"name\":\"Surebuild CEM V/A (S-V) 42.5N 50Kg UPC\",\n                     \"unitMass\":50,\n                     \"unitWeightUom\":\"KG\",\n                     \"unitVolume\":null,\n                     \"unitVolumeUom\":\"\",\n                     \"packingUnit\":{\n                        \"reference\":\"PAL\",\n                        \"name\":\"Pallet\",\n                        \"productQuantity\":6,\n                        \"unitMass\":13,\n                        \"unitMassUom\":\"KG\",\n                        \"unitVolume\":0.04011,\n                        \"unitVolumeUom\":\"M\"\n                     }\n                  },\n                  {\n                     \"reference\":\"PAL\",\n                     \"name\":\"Pallet\",\n                     \"unitMass\":13,\n                     \"unitWeightUom\":\"KG\",\n                     \"unitVolume\":\"\",\n                     \"unitVolumeUom\":\"\",\n                     \"packingUnit\":{\n                        \"reference\":\"PAL\",\n                        \"name\":\"Pallet\",\n                        \"productQuantity\":1,\n                        \"unitMass\":13,\n                        \"unitMassUom\":\"KG\",\n                        \"unitVolume\":0.04011,\n                        \"unitVolumeUom\":\"M\"\n                     }\n                  }\n               ]\n            }\n         }\n      ]\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/tms/epod/route-plans",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tms",
+						"epod",
+						"route-plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Epod_Route_plan_GET",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/tms/epod/route-plans/R100001-05_159",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tms",
+						"epod",
+						"route-plans",
+						"R100001-05_159"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Yard_Route_plan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"company\": {\n    \"reference\": \"TWINSAVER\",\n    \"name\": \"TWINSAVER\",\n    \"routes\": [\n      {\n        \"reference\": \"R232312_CB0666\",\n        \"name\": \"R232312_CB0666\",\n        \"startAt\": \"2023-01-18T09:30+02:00\",\n        \"endAt\": \"2023-01-18T17:00+02:00\",\n        \"vehicleType\": {\n          \"reference\": \"34Ton\"\n        },\n        \"transporter\": {\n          \"reference\": \"Orange\"\n        },\n        \"vehicle\": {\n          \"registrationNumber\": \"FS74GFGP\"\n        },\n        \"trips\": [\n          {\n            \"reference\": \"TR232312_CB0666\",\n            \"name\": \"TR232312_CB0666\",\n            \"startAt\": \"2023-01-18T09:30+02:00\",\n            \"endAt\": \"2023-01-18T13:00+02:00\",\n            \"domain\": \"Secondary\",\n            \"additionalData\": [\n              {\n                \"key\": \"Activity\",\n                \"val\": \"Move Coal\"\n              }\n            ],\n            \"stops\": [\n              {\n                \"reference\": \"153-11\",\n                \"sequence\": \"1\",\n                \"workflowType\": \"Test Planned\",\n                \"stopType\": \"Pick\",\n                \"arrivalAt\": \"2023-01-18T09:30+02:00\",\n                \"departureAt\": \"2023-01-18T11:00+02:00\",\n                \"instruction\": \"Wear PPE\",\n                \"locationReference\": \"TSGPretoria\",\n                \"driverReference\": \"D5555\",\n                \"orders\": [\n                  {\n                    \"orderNumber\": \"ORD232312_CB0666\"\n                  }\n                ]\n              },\n              {\n                \"reference\": \"153-13\",\n                \"sequence\": \"2\",\n                \"stopType\": \"Drop\",\n                \"workflowType\": \"Test Planned\",\n                \"arrivalAt\": \"2023-01-18T13:30+02:00\",\n                \"departureAt\": \"2023-01-18T14:30+02:00\",\n                \"instruction\": \"Wear PPE\",\n                \"locationReference\": \"Build1234\",\n                \"driverReference\": \"D5555\",\n                \"orders\": [\n                  {\n                    \"orderNumber\": \"ORD232312_CB0667\"\n                  }\n                ],\n                \"additionalData\": [\n                  {\n                    \"key\": \"Activity\",\n                    \"val\": \"Move Coal\"\n                  }\n                ]\n              }\n            ]\n          }\n        ],\n        \"orders\": [\n          {\n            \"orderNumber\": \"ORD232312_CB0666\",\n            \"createdAt\": \"2023-01-18T10:00+02:00\",\n            \"customerReferenceNumber\": \"PO23244\",\n            \"sourceLocationReference\": \"TSGPretoria\",\n            \"destinationLocationReference\": \"Build1234\",\n            \"divisionReference\": \"BU001\",\n            \"serviceDate\": \"2023-01-13\",\n            \"serviceStart\": \"08:00\",\n            \"serviceEnd\": \"11:00\",\n            \"plannedWeight\": 34208,\n            \"plannedWeightUom\": \"KG\",\n            \"plannedVolume\": null,\n            \"plannedVolumeUom\": \"\",\n            \"readyStatus\": \"Ready\",\n            \"planningStatus\": \"Cancelled\",\n            \"additionalData\": [\n              {\n                \"key\": \"Comment\",\n                \"val\": \"Some instruction\"\n              }\n            ],\n            \"items\": [\n              {\n                \"itemNumber\": \"10\",\n                \"reference\": \"PROD001\",\n                \"plannedItemQuantity\": 34.34,\n                \"plannedItemUom\": \"EA\",\n                \"additionalData\": [\n                  {\n                    \"key\": \"Comment\",\n                    \"val\": \"Some instruction\"\n                  }\n                ]\n              },\n              {\n                \"itemNumber\": \"20\",\n                \"reference\": \"PROD002\",\n                \"plannedItemQuantity\": 14.1,\n                \"plannedItemUom\": \"EA\",\n                \"additionalData\": [\n                  {\n                    \"key\": \"Comment\",\n                    \"val\": \"Some instruction\"\n                  }\n                ]\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"masterdata\": {\n    \"divisions\": [\n      {\n        \"reference\": \"BU001\",\n        \"name\": \"Milk Division\"\n      }\n    ],\n    \"drivers\": [\n      {\n        \"reference\": \"D5555\",\n        \"name\": \"Chene\",\n        \"surname\": \"Brink\",\n        \"contact\": \"0647520190\",\n        \"additionalData\": [\n          {\n            \"key\": \"Comment\",\n            \"val\": \"Someinstruction\"\n          }\n        ]\n      }\n    ],\n    \"vehicles\": [\n      {\n        \"registrationNumber\": \"FS74GFGP\",\n        \"vehicleTypeReference\": \"34Ton\",\n        \"additionalData\": [\n          {\n            \"key\": \"Comment\",\n            \"val\": \"Some instruction\"\n          }\n        ]\n      }\n    ],\n    \"vehicleTypes\": [\n      {\n        \"reference\": \"34Ton\",\n        \"name\": \"34Ton\",\n        \"maxWeight\": 33000.5,\n        \"maxWeightUOM\": \"KG\",\n        \"maxVolume\": 30.1,\n        \"maxVolumeUOM\": \"CM\"\n      }\n    ],\n    \"transporters\": [\n      {\n        \"reference\": \"Orange\",\n        \"name\": \"Orange Trucking\",\n        \"additionalData\": [\n          {\n            \"key\": \"Comment\",\n            \"val\": \"Some instruction\"\n          }\n        ]\n      }\n    ],\n    \"locations\": [\n      {\n        \"reference\": \"TSGPretoria\",\n        \"name\": \"TwinSaver Pretoria\",\n        \"address1\": \"274 Research Rd\",\n        \"address2\": \"Pretoria Industrial\",\n        \"address3\": \"\",\n        \"city\": \"Pretoria\",\n        \"province\": \"Gauteng\",\n        \"countryCode\": \"ZA\",\n        \"latitude\": \"-25.77046470\",\n        \"longitude\": \"28.11983350\",\n        \"facility\": [\n          {\n            \"reference\": \"F001\",\n            \"name\": \"MilkWarehouse\"\n          },\n          {\n            \"reference\": \"F002\",\n            \"name\": \"YoghurtWarehouse\"\n          }\n        ],\n        \"additionalData\": [\n          {\n            \"key\": \"Comment\",\n            \"val\": \"Someinstruction\"\n          }\n        ]\n      },\n      {\n        \"reference\": \"Build1234\",\n        \"name\": \"Builders Warehouse\",\n        \"address1\": \"23 Jeppy Street\",\n        \"address2\": \"Germiston\",\n        \"address3\": \"\",\n        \"city\": \"JHB\",\n        \"province\": \"Gauteng\",\n        \"countryCode\": \"ZA\",\n        \"latitude\": \"-25.7142671\",\n        \"longitude\": \"28.1733473\"\n      }\n    ],\n    \"products\": [\n      {\n        \"reference\": \"PROD001\",\n        \"name\": \"White Tissues\",\n        \"productGroup\": \"Tissues\",\n        \"unitMass\": 34.44,\n        \"unitMassUom\": \"KG\",\n        \"unitVolume\": 12.434,\n        \"unitVolumeUOM\": \"M\",\n        \"additionalData\": [\n          {\n            \"key\": \"Comment\",\n            \"val\": \"Someinstruction\"\n          }\n        ]\n      },\n      {\n        \"reference\": \"PROD002\",\n        \"name\": \"2 Ply Toilet Paper\",\n        \"productGroup\": \"Toilet Paper\",\n        \"unitMass\": 34.44,\n        \"unitMassUom\": \"KG\",\n        \"unitVolume\": 12.434,\n        \"unitVolumeUOM\": \"M\"\n      }\n    ]\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/tms/yard/yard-route-plans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"tms",
+						"yard",
+						"yard-route-plans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubscriptionRecordCreation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"01FNX1F8XTFRKVSK696BAXZVS4\",\n    \"source\" : \"vishal.aggarwal@inhancesc.com\",\n    \"tracingId\" : \"b24c3c9a-1887-11ed-861d-0242ac120002\",\n    \"domain\" : \"EPOD\",\n    \"code\" : \"WORKFLOW_EVENT_CREATED\",\n    \"occurredAt\" : \"2022-08-10 13:16:50.996981\",\n    \"payload\": \"TEST\",\n    \"originOccurredAt\": \"2022-08-10 13:16:50.996981\",\n    \"eventGroup\": \"NA\",\n    \"eventDeduplicationId\": \"01FNX1F8XTFRKVSK696BAXZVS3\",\n    \"searchKey\": \"NA\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://vishal.test:8000/api/integral/api/v1/event/register_event",
+					"protocol": "http",
+					"host": [
+						"vishal",
+						"test"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"integral",
+						"api",
+						"v1",
+						"event",
+						"register_event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GeneratePassportToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://vishal.test:8000/api/integral/auth/token",
+					"protocol": "http",
+					"host": [
+						"vishal",
+						"test"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"integral",
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAP API",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "INHpiq20092022",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "PIINHANCE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://sdnuxpiq.ppc.co.za:1443/RESTAdapter/inhance/epod_document",
+					"protocol": "https",
+					"host": [
+						"sdnuxpiq",
+						"ppc",
+						"co",
+						"za"
+					],
+					"port": "1443",
+					"path": [
+						"RESTAdapter",
+						"inhance",
+						"epod_document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Planned Route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/tms/epod/routes/planned/R545255",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"tms",
+						"epod",
+						"routes",
+						"planned",
+						"R545255"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Twillio-Sms",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "CXmQzacW3ydjA4LE7Mnpz0GbDnHctxAAC6ms3ZYj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"module\":\"EPOD\",\n   \"domain\":\"HE\",\n   \"notificationDetails\":{\n      \"type\":\"sms\",\n      \"subject\":\"driver_link\",\n      \"name\":\"Chene\",\n      \"surname\":\"Brink\",\n      \"countryCode\":\"RSA\",\n      \"recipient\":\"+917840051964\",\n      \"message\":\"Hello Chene, please follow the link to access your route for 7 Feb 2023. shorturl.at/kxK68\"\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/communicator/send-sms",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"communicator",
+						"send-sms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SanctumCsrf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/sanctum/csrf-cookie",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"sanctum",
+						"csrf-cookie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Capture Access Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "a6c51dec18235de3b1deae1c5bca644bef64542f7f3fc6d1f17bdf0349bee9c5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"routeReference\": \"R232312_CB068\",\n    \"tripReference\": \"T232312_CB068\",\n    \"plannedStopReference\": \"Stop-272\",\n    \"accessCode\": \"GXXEH\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/tms/epod/capture-access-code",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tms",
+						"epod",
+						"capture-access-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DriverLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reference\": \"D2222\",\n    \"pin\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/tms/epod/driver",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tms",
+						"epod",
+						"driver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workflows",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "fa6d5317-3ddc-4407-b184-70a6eded4f64",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/v1/tms/epod/workflows",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tms",
+						"epod",
+						"workflows"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "passport-token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "969eb191-4e39-4773-a488-252fd07113bd",
+							"type": "text"
+						},
+						{
+							"key": "secret",
+							"value": "xjxoQUgMdD2hZHSk55TjvQXmDPRALlJTkCYEdwg9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://dev-epod.inhanceapps.com/oath/token",
+					"protocol": "https",
+					"host": [
+						"dev-epod",
+						"inhanceapps",
+						"com"
+					],
+					"path": [
+						"oath",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAccessCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "EpodDev-PassportToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "969eb191-4e39-4773-a488-252fd07113bd",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "xjxoQUgMdD2hZHSk55TjvQXmDPRALlJTkCYEdwg9",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://dev-epod.inhanceapps.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"dev-epod",
+						"inhanceapps",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PPC-PassportToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "99aae97c-05ec-4ed8-888c-7819b99793fc",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "9w9WSriCyF4RmfToPvR2smUPLhV6rcd210EHr5Tt",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://qa-ppc.inhanceapps.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"qa-ppc",
+						"inhanceapps",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EpodDev-CaptureAccessToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NjllYjE5MS00ZTM5LTQ3NzMtYTQ4OC0yNTJmZDA3MTEzYmQiLCJqdGkiOiI0NjZkNTZkNGNjYjU0NDFkZTJkYjFjZDBiMTYyOGYzZTg0ODc4MDdhMTk1YWI2ZjA5NzE4NmYwY2FiYjI1ODVmOGFjZmViZDAyYTYwMzhkYSIsImlhdCI6MTY4NTUyMzAyMS45NDc3NzQsIm5iZiI6MTY4NTUyMzAyMS45NDc3NzcsImV4cCI6MTY4NTYwOTQyMS45MzM0ODYsInN1YiI6IiIsInNjb3BlcyI6W119.IKbt-5X7H8KKzrdgNIVqtZ0kYe1zwTnOsSJzgsJd2GfkStPqgnCEimJw2tlyVPr6qSdNc-Pm6s6jyXGDnQiKJRCWoHdMTHo0Oa7xX57P8Szc0F-u1pHJDwgXQEBIrOwmprhxfBecS7P33zh8wrEXUytZHKf8QkztKroVLlRC2UJMnW-o143Duam1IvNEiGREZz7-ROVSVcWsMLTvH5gelJurtM7Lx3FtIbOMVGwioPig4n_1TYkq7ZPRNMKiLzt7mRT9qJSsnWJiOb8Oquqb2eT_j7ds2mPa3_YPydxmFuHgxF0jKpmE_urcMycFRpGT_Jdd_EEKz3LJqZxB3gaVSBIegIcjgK0pg7lj60dBP8QGSPe_7q-DpgLznmOh1StV3paarYetufd8_gTy6lDvWs6t8kvHBXFCpvl-D7gI9cRckaG6X7z_zC42elxG2dgqKd4XBFkLrPCCPZnLRp7jgmeoGJk_1-zDtt-wXdrV9ttb86VvgVgyUesxdcZWBOXOcls_CECVh2zgg96eZmBgAlChOiu1MMqXruLnySP1l2y0X5WsTmBGRkR-QECzrW_QHCyHDa0dqcvohV5fXdMyonRpUDaxIgSFHG_nHHInBa031lUXBnM4-tUYE5pcq-B0jI0e3A7CLOHAfa5Z2aBsBKdmgBfCtM6Qd3v0EZVmLeQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"routeReference\": \"R100001-05_138\",\n    \"tripReference\": \"R100001-05_138\",\n    \"plannedStopReference\": \"Stop 1-F138\",\n    \"accessCode\": \"GXXEH\"\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev-epod.inhanceapps.com/api/v1/tms/epod/capture-access-code",
+					"protocol": "https",
+					"host": [
+						"dev-epod",
+						"inhanceapps",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tms",
+						"epod",
+						"capture-access-code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PPC-Epod_Route_plan_GET",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/tms/epod/route-plans/R100001-05_159",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tms",
+						"epod",
+						"route-plans",
+						"R100001-05_159"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PPC-Epod_Route_plan_GET Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa-ppc.inhanceapps.com/api/v1/tms/epod/routes/plans/R457091_D5555-91",
+					"protocol": "https",
+					"host": [
+						"qa-ppc",
+						"inhanceapps",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tms",
+						"epod",
+						"routes",
+						"plans",
+						"R457091_D5555-91"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
